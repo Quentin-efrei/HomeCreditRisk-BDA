@@ -11,11 +11,15 @@ def main(argv):
     df = drop_some_columns(df)
     df = fill_some_rows(df)
     df = df.drop('SK_ID_CURR',axis=1)
-    temp = df['TARGET']
-    df.drop('TARGET',inplace=True,axis=1)
-    df = make_categorical_numerical(df)
-    df['TARGET'] = temp
-    df.to_csv('ready-data/'+name_to_save+'.csv')
+    if argv[0] == 'data/application_train.csv':
+        temp = df['TARGET']
+        df.drop('TARGET',inplace=True,axis=1)
+        df = make_categorical_numerical(df)
+        df['TARGET'] = temp
+        df.to_csv('ready-data/'+name_to_save+'.csv')
+    else:
+        df.to_csv('ready-data/'+name_to_save+'.csv')
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
