@@ -1,7 +1,8 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn import metrics
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
+import XGBoost as xgb
 
 def missing_values(df):
     '''
@@ -80,11 +81,17 @@ def train_xgboost(X_train,y_train):
     '''
     Function to train a xgboost model
     '''
+    model = XGBoostClassifier() #initializing XGBoost
+    model.fit(X_train,y_train) # fitting data to the model.
+    return model # returning created model
 
 def train_gradient_boosting(X_train,y_train):
     '''
     Function to train a gradient boosting model
     '''
+    model = GradientBoostingClassifier() #initializing randomforest classifier with n_estimators = 100
+    model.fit(X_train,y_train) # fitting data to the model.
+    return model # returning created model
 
 def predictions(model,X_test):
     '''
