@@ -163,6 +163,11 @@ You can see it in a more summarized way
 
 ## MLFlow library part
 
+Here you can see what's the output of the MLFLOW part, once we train model, we log every artifacts & MLFLOW will make graphics out of it such as classification matrix, roc curves, ect. Here a sample of it of GradientBoostingClassifier
+<p align="center">
+  <img src="images/mlflow_gradientboosting.png" />
+</p>
+
 Here the learning curve for Random Forest model built on MLFlow.
 <p align="center">
   <img src="images/mlflow_randomforest.png" />
@@ -171,11 +176,6 @@ Here the learning curve for Random Forest model built on MLFlow.
 Here the confusion matrix for XGBoost model built on MLFlow.
 <p align="center">
   <img src="images/mlflow_xgboost.png" />
-</p>
-
-?????
-<p align="center">
-  <img src="images/mlflow_gradientboosting.png" />
 </p>
 
 Here the history of our runs on MLFlow.
