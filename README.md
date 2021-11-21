@@ -146,6 +146,9 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 - SHAP interpretation
 
-![](images/shaplay_values.png)
-
-![](images/summary_plot.png)
+<p align="center">
+  <img src="images/shaplay_values.png" />
+</p>
+<p align="center">
+  <img src="images/summary_plot.png" />
+</p>
