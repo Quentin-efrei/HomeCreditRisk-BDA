@@ -147,6 +147,19 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 ### Sphinx library
 
+We made our documentation using sphinx library.
+From comments in our Code on python files, it generated a documentation
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/63016254/142781044-8ca1c403-b5b9-473e-b831-76adbec4cb5d.png" />
+</p>
+
+You can see it in a more summarized way
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/63016254/142781065-f7172034-6c92-476b-b134-06c2f06650a2.png" />
+</p>
+
 
 ## MLFlow library part
 
