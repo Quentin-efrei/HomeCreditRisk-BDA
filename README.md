@@ -97,6 +97,22 @@ After running this two commands, new csv files will be create in the local direc
 To train our model we have selected the TARGET column for Y_train and the rest of the features for X_train. Where our starting data set contained 122 columns, we were able to halve with the preprocessing part and come up with 67 columns.
 
 We have trained 3 different models, the first one corresponds to random forest, the second one to xgboost and the last one to gradient boosting
+We started to split the dataset for the training part. 80% of the dataset will be used to train/fit the model and rest 20% will be used to test the model.
+
+```python
+X_train, X_test, Y_train,Y_test = train_test_split(X,Y,random_state=42,test_size=0.2)
+```
+
+Here an example of how we trained a Random Forest model :
+
+```python
+def train_random_forest(X_train,y_train):
+#Function to train a random forest model
+    model = RandomForestClassifier(n_estimators=100) #initializing randomforest classifier with n_estimators = 100
+    model.fit(X_train,y_train) # fitting data to the model.
+    return model # returning created model
+```
+
 
 In order to train a model of our choice, we need to write in the windows command line the name of the python script we want to run, the name of the dataset we choose and the name of the model. 
 
@@ -108,6 +124,11 @@ In order to train a model of our choice, we need to write in the windows command
 
 ### 1.3 Predictions
 
+```
+Accuracy of XGBOOST :  0.919386046209128
+Accuracy of rforest :  0.919662455489976
+Accuracy of gradient boosting :  0.9198087898151309
+```
 
 ### 1.4 Sphinx library
 
