@@ -168,7 +168,7 @@ Here you can see what's the output of the MLFLOW part, once we train model, we l
   <img src="images/mlflow_gradientboosting.png" />
 </p>
 
-Here the learning curve for Random Forest model built on MLFlow.
+Here the roc curve for Random Forest model built on MLFlow.
 <p align="center">
   <img src="images/mlflow_randomforest.png" />
 </p>
