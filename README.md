@@ -162,6 +162,10 @@ Visualize explanations for a specific point of your data set,
 
 Visualize explanations for all points of  your data set at once
 
+<p align="center">
+  <img src="images/global_plot.png" />
+</p>
+
 Visualizea summary plot for each class on the whole dataset.
 <p align="center">
   <img src="images/summary_plot.png" />
