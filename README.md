@@ -10,7 +10,7 @@ Here we made our predictions following 3 different models: Xgboost, Random Fores
 
 ## 1. Machine Learning part
 
-### 1.1  Data preparation
+### 1.1  Data preparation / Feature Engineering
 
 For the Data preprocessing part, there were a lot of columns with missing values. We therefore decided to remove the columns containing more than 30% of missing values thanks to the function missing_values (). <br>
 
@@ -84,16 +84,32 @@ def scale_data(df):
     return data # returning updated dataframe
 ```
 
-### 1.2 Feature engineering
+In order to run the preprocessing part, we just need to write in the command line : 
+```
+   python feature-engineering.py data/application_train.csv train
+   python feature-engineering.py data/application_test.csv test
+```
+The we made a difference between the preprocessing of the train and test csv files because the second one doesn't have the TARGET column. 
+After running this two commands, new csv files will be create in the local directory /HomeCreditRisk-BDA/ready-data/. 
+
+### 1.2 Models training 
+
+To train our model we have selected the TARGET column for Y_train and the rest of the features for X_train. Where our starting data set contained 122 columns, we were able to halve with the preprocessing part and come up with 67 columns.
+
+We have trained 3 different models, the first one corresponds to random forest, the second one to xgboost and the last one to gradient boosting
+
+In order to train a model of our choice, we need to write in the windows command line the name of the python script we want to run, the name of the dataset we choose and the name of the model. 
+
+```
+   python training-models.py ready-data/train.csv RandomForest
+   python training-models.py ready-data/train.csv XGBoost
+   python training-models.py ready-data/train.csv GradientBoostingClassifier
+```
+
+### 1.3 Predictions
 
 
-### 1.3 Models training 
-
-
-### 1.4 Predictions
-
-
-### 1.5 Sphinx library
+### 1.4 Sphinx library
 
 
 ## 2. MLFlow library part
