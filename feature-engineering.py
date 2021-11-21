@@ -10,8 +10,8 @@ def main(argv):
     df = df.drop(columns_to_drop, axis=1)
     df = drop_some_columns(df)
     df = fill_some_rows(df)
-    df = df.drop('SK_ID_CURR',axis=1)
     if argv[0] == 'data/application_train.csv':
+        df = df.drop('SK_ID_CURR',axis=1)
         temp = df['TARGET']
         df.drop('TARGET',inplace=True,axis=1)
         df = make_categorical_numerical(df)
