@@ -150,7 +150,21 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 ## MLFlow library part
 
-- MLFlow
+<p align="center">
+  <img src="images/mlflow_randomforest.png" />
+</p>
+
+<p align="center">
+  <img src="images/mlflow_xgboost.png" />
+</p>
+
+<p align="center">
+  <img src="images/mlflow_gradientboosting.png" />
+</p>
+
+<p align="center">
+  <img src="images/mlruns.png" />
+</p>
 
 ## SHAP interpretation part
 
