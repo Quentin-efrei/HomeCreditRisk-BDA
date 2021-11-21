@@ -1,25 +1,40 @@
-import shap  # package used to calculate Shap values
+import sys
 import pickle
 import pandas as pd
-from functions import scale_data
-import matplotlib.pyplot as plt
+from functions import scale_data,predictions
 
-filename = "models/xgboostclassifier.sav"
-loaded_model = pickle.load(open(filename, 'rb'))
-# Create object that can calculate shap values
-explainer = shap.TreeExplainer(loaded_model)
+def main(argv):
+    print('data : ',argv[0]) # printing first arg, should be data location
+    print('model type : ',argv[1]) # priting second arg, should be model you want to predict with
+    df = pd.read_csv(argv[0])
+    id = pd.DataFrame(df['SK_ID_CURR'])
+    df = df.drop('SK_ID_CURR',axis=1)
+    to_pred = scale_data(df)
+    if argv[1] == 'XGBoost':
+        filename = "models/xgboostclassifier.sav"
+        loaded_model = pickle.load(open(filename, 'rb'))
+        pred = predictions(loaded_model,to_pred)
+        id['TARGET'] = pred
+        id.to_csv('predictions/xgboost_pred.csv')
+        print('Predictions saved in csv')
+    elif argv[1] == 'GradientBoostingClassifier':
+        filename = "models/gdbclassifier.sav"
+        loaded_model = pickle.load(open(filename, 'rb'))
+        pred = predictions(loaded_model,to_pred)
+        id['TARGET'] = pred
+        id.to_csv('predictions/gdbclassifier_pred.csv')
+        print('Predictions saved in csv')
+    elif argv[1] == 'RandomForest':
+        filename = "models/randomforest.sav"
+        loaded_model = pickle.load(open(filename, 'rb'))
+        pred = predictions(loaded_model,to_pred)
+        id['TARGET'] = pred
+        id.to_csv('predictions/randomforest_pred.csv')
+        print('Predictions saved in csv')
+    else:
+        print('error')
+        sys.exit(2)
 
-df = pd.read_csv('ready-data/test.csv')
-X = scale_data(df) # normalizing data before training
-# calculate shap values. This is what we will plot.
-# Calculate shap_values for all of val_X rather than a single row, to have more data for plot.
-shap_values = explainer.shap_values(X)
-print(shap_values)
-# Make plot. Index of [1] is explained in text below.
-fig1 = shap.summary_plot(shap_values,X,show=False)
-plt.savefig('plot/shap_summary_plot_xgboost.png')
-
-#fig2 = shap.plots.scatter(shap_values[:, "OWN_CAR_AGE"], color=shap_values)
-fig2 = shap.dependence_plot("EXT_SOURCE_3", shap_values, X)
-plt.savefig('plot/shap_ext_source_3_plot_xgboost.png')
+if __name__ == "__main__":
+    main(sys.argv[1:])
 
