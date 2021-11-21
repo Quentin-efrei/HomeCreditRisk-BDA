@@ -103,7 +103,7 @@ We started to split the dataset for the training part. 80% of the dataset will b
 X_train, X_test, Y_train,Y_test = train_test_split(X,Y,random_state=42,test_size=0.2)
 ```
 
-Here an example of how we trained a Random Forest model :
+Here an example of how we trained a Random Forest model (it's pretty much the same for gradient boosting and xgboost) :
 
 ```python
 def train_random_forest(X_train,y_train):
@@ -117,9 +117,9 @@ def train_random_forest(X_train,y_train):
 In order to train a model of our choice, we need to write in the windows command line the name of the python script we want to run, the name of the dataset we choose and the name of the model. 
 
 ```
-   python training-models.py ready-data/train.csv RandomForest
-   python training-models.py ready-data/train.csv XGBoost
-   python training-models.py ready-data/train.csv GradientBoostingClassifier
+python training-models.py ready-data/train.csv RandomForest
+python training-models.py ready-data/train.csv XGBoost
+python training-models.py ready-data/train.csv GradientBoostingClassifier
 ```
 
 ### 1.3 Predictions
