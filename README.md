@@ -163,18 +163,22 @@ You can see it in a more summarized way
 
 ## MLFlow library part
 
+Here the learning curve for Random Forest model built on MLFlow.
 <p align="center">
   <img src="images/mlflow_randomforest.png" />
 </p>
 
+Here the confusion matrix for XGBoost model built on MLFlow.
 <p align="center">
   <img src="images/mlflow_xgboost.png" />
 </p>
 
+?????
 <p align="center">
   <img src="images/mlflow_gradientboosting.png" />
 </p>
 
+Here the history of our runs on MLFlow.
 <p align="center">
   <img src="images/mlruns.png" />
 </p>
