@@ -27,7 +27,7 @@ plt.savefig('plot/shap_summary_plot_xgboost.png')
 fig2 = shap.dependence_plot("EXT_SOURCE_3", shap_values, X)
 plt.savefig('plot/shap_ext_source_3_plot_xgboost.png')
 
-shap.bar_plot(explainer.shap_values(X)[3],feature_names = list, max_display=10)
+shap.bar_plot(explainer.shap_values(X)[0],feature_names = list, max_display=10)
 plt.savefig('plot/test.png')
 
 shap.summary_plot(explainer.shap_values(X),
