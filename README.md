@@ -12,6 +12,12 @@ Here we made our predictions following 3 different models: Xgboost, Random Fores
 
 ### 1.1  Data preparation
 
+For the Data preprocessing part, there were a lot of columns with missing values. We therefore decided to remove the columns containing more than 30% of missing values thanks to the function missing_values (). <br>
+We also chose to remove all the ‘AMT_REQ_CREDIT_BUREAU_XXX’ columns because it did not seem necessary to make our predictions. <br>
+For the columns that contained less than 30% missing values, we replaced the missing values with the means for the numeric values and with a new categorical value for the qualitative values. <br>
+In addition, we made dummies on categorical values. In fact, one-hot encoding allows us to assign binary values to categorical data. Thanks to this, better predictions can be made because one value is not given more weight than another. <br>
+Finally, we normalize all data with sklearn's MinMaxScaler function. This is to put all the data on the same scale and therefore equalize the weights of each dimension. <br> 
+
 
 ### 1.2 Feature engineering
 
