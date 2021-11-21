@@ -4,7 +4,7 @@ Big Data Applications - HomeCreditRiskAssessment
 Project's autor : Hélène Boersma, Quentin Courtois & Guillaume Jaouen
 
 - [Introduction](#introduction)
-- [1. Machine Learning part](#machine-learning-part)
+- [Machine Learning part](#machine-learning-part)
   - [1.1 Data preparation / Feature Engineering](#data-preparation-feature-engineering)
   - [1.2 Models training](#training-models)
   - [1.3 Predictions](#predictions)
