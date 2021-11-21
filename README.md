@@ -146,14 +146,23 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 - SHAP interpretation
 
+Build a TreeExplainer and compute Shaplay Values
 <p align="center">
   <img src="images/shaplay_values.png" />
 </p>
 
+Visualize explanations for a specific point of your data set, 
 <p align="center">
   <img src="images/barplot_10_at_once.png" />
 </p>
 
+<p align="center">
+  <img src="images/barplot_10_at_once2.png" />
+</p>
+
+Visualize explanations for all points of  your data set at once
+
+Visualizea summary plot for each class on the whole dataset.
 <p align="center">
   <img src="images/summary_plot.png" />
 </p>
