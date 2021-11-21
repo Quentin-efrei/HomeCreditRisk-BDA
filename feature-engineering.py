@@ -18,6 +18,7 @@ def main(argv):
         df['TARGET'] = temp
         df.to_csv('ready-data/'+name_to_save+'.csv')
     else:
+        df = make_categorical_numerical(df)
         df.to_csv('ready-data/'+name_to_save+'.csv')
 
 
