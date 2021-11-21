@@ -154,10 +154,11 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 ## SHAP interpretation part
 
-- SHAP interpretation
-
 **Build a TreeExplainer and compute Shaplay Values**
 
+```python
+shap_values = explainer.shap_values(X)
+```
 
 ```python
 fig2 = shap.dependence_plot("EXT_SOURCE_3", shap_values, X)
@@ -198,7 +199,6 @@ shap.bar_plot(explainer.shap_values(X)[1],feature_names = list, max_display=10)
 **Visualize a summary plot for each class on the whole dataset**
 
 ```python
-shap_values = explainer.shap_values(X)
 fig1 = shap.summary_plot(shap_values,X,show=False)
 plt.savefig('plot/shap_summary_plot_xgboost.png')
 ```
