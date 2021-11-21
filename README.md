@@ -164,11 +164,20 @@ Accuracy of gradient boosting :  0.9198087898151309
 **Visualize explanations for a specific point of your data set**
 
 The first plot is for the class 0, when the loan cannot be repaid.
+
+```python
+shap.bar_plot(explainer.shap_values(X)[0],feature_names = list, max_display=10)
+```
+
 <p align="center">
   <img src="images/barplot_10_at_once.png" />
 </p>
 
 The second plot is for the class 1, when the loan can be repaid.
+
+```python
+shap.bar_plot(explainer.shap_values(X)[1],feature_names = list, max_display=10)
+```
 <p align="center">
   <img src="images/barplot_10_at_once2.png" />
 </p>
