@@ -3,6 +3,16 @@ Big Data Applications - HomeCreditRiskAssessment
 
 Project's autor : Hélène Boersma, Quentin Courtois & Guillaume Jaouen
 
+- [Introduction](#introduction)
+- [1. Machine Learning part](#machine-learning-part)
+  - [1.1 Data preparation / Feature Engineering](#data-preparation-feature-engineering)
+  - [1.2 Models training](#training-models)
+  - [1.3 Predictions](#predictions)
+  - [1.4 Sphinx library](#sphinx-library)
+- [2. MLFlow library part](#mlflow-library-part)
+- [3. SHAP interpretation part](#shap-interpretation-part)
+- [4. Conclusion](#conclusion)
+
 ## Introduction
 
 The objective of this project was to make predictions from the Home Credit Risk Classification dataset. The dataset is made up of several csv files. For this project, we focused on application_train.csv on which we built our models, then we made our predictions on application_test.csv. The application_train.csv file is composed of 122 columns, the TARGET column represents whether an applicant is able to repay a loan. The application_test.csv file contains the same columns except TARGET which must be predicted. <br>
@@ -146,12 +156,13 @@ Accuracy of gradient boosting :  0.9198087898151309
 
 - SHAP interpretation
 
-Build a TreeExplainer and compute Shaplay Values
+**Build a TreeExplainer and compute Shaplay Values**
 <p align="center">
   <img src="images/shaplay_values.png" />
 </p>
 
-Visualize explanations for a specific point of your data set, 
+**Visualize explanations for a specific point of your data set**
+
 <p align="center">
   <img src="images/barplot_10_at_once.png" />
 </p>
@@ -160,13 +171,13 @@ Visualize explanations for a specific point of your data set,
   <img src="images/barplot_10_at_once2.png" />
 </p>
 
-Visualize explanations for all points of  your data set at once
+**Visualize explanations for all points of  your data set at once**
 
 <p align="center">
   <img src="images/global_plot.png" />
 </p>
 
-Visualizea summary plot for each class on the whole dataset.
+**Visualize a summary plot for each class on the whole dataset**
 <p align="center">
   <img src="images/summary_plot.png" />
 </p>
