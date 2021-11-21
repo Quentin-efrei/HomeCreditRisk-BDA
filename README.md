@@ -23,7 +23,7 @@ Here we made our predictions following 3 different models: Xgboost, Random Fores
   <img src="images/pipeline_hcra.png" />
 </p>
 
-## 1. Machine Learning part
+## Machine Learning part
 
 ### 1.1  Data preparation / Feature Engineering
 
