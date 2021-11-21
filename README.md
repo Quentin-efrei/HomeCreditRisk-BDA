@@ -5,13 +5,13 @@ Project's autor : Hélène Boersma, Quentin Courtois & Guillaume Jaouen
 
 - [Introduction](#introduction)
 - [Machine Learning part](#machine-learning-part)
-  - [1.1 Data preparation / Feature Engineering](#data-preparation-feature-engineering)
-  - [1.2 Models training](#training-models)
-  - [1.3 Predictions](#predictions)
-  - [1.4 Sphinx library](#sphinx-library)
-- [2. MLFlow library part](#mlflow-library-part)
-- [3. SHAP interpretation part](#shap-interpretation-part)
-- [4. Conclusion](#conclusion)
+  - [Data preparation / Feature Engineering](#data-preparation-feature-engineering)
+  - [Models training](#training-models)
+  - [Predictions](#predictions)
+  - [Sphinx library](#sphinx-library)
+- [MLFlow library part](#mlflow-library-part)
+- [SHAP interpretation part](#shap-interpretation-part)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -107,7 +107,7 @@ In order to run the preprocessing part, we just need to write in the command lin
 The we made a difference between the preprocessing of the train and test csv files because the second one doesn't have the TARGET column. 
 After running this two commands, new csv files will be create in the local directory /HomeCreditRisk-BDA/ready-data/. 
 
-### 1.2 Models training 
+### Models training 
 
 To train our model we have selected the TARGET column for Y_train and the rest of the features for X_train. Where our starting data set contained 122 columns, we were able to halve with the preprocessing part and come up with 67 columns.
 
@@ -137,7 +137,7 @@ python training-models.py ready-data/train.csv XGBoost
 python training-models.py ready-data/train.csv GradientBoostingClassifier
 ```
 
-### 1.3 Predictions
+### Predictions
 
 ```
 Accuracy of XGBOOST :  0.919386046209128
@@ -145,14 +145,14 @@ Accuracy of rforest :  0.919662455489976
 Accuracy of gradient boosting :  0.9198087898151309
 ```
 
-### 1.4 Sphinx library
+### Sphinx library
 
 
-## 2. MLFlow library part
+## MLFlow library part
 
 - MLFlow
 
-## 3. SHAP interpretation part
+## SHAP interpretation part
 
 - SHAP interpretation
 
