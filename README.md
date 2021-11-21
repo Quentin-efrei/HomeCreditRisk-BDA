@@ -149,6 +149,12 @@ Accuracy of gradient boosting :  0.9198087898151309
 <p align="center">
   <img src="images/shaplay_values.png" />
 </p>
+
+<p align="center">
+  <img src="barplot_10_at_once.png" />
+</p>
+
 <p align="center">
   <img src="images/summary_plot.png" />
 </p>
+
