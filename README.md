@@ -192,10 +192,10 @@ shap.bar_plot(explainer.shap_values(X)[1],feature_names = list, max_display=10)
 
 **Visualize explanations for all points of  your data set at once**
 
-<p align="center">
+```python
 shap.bar_plot(explainer.shap_values(X)[0],feature_names = list, max_display=10)
 plt.savefig('plot/test.png')
-</p>
+```
   
 <p align="center">
   <img src="images/global_plot.png" />
