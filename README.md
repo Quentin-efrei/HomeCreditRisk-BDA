@@ -151,7 +151,7 @@ Accuracy of gradient boosting :  0.9198087898151309
 </p>
 
 <p align="center">
-  <img src="barplot_10_at_once.png" />
+  <img src="images/barplot_10_at_once.png" />
 </p>
 
 <p align="center">
