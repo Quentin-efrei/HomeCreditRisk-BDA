@@ -173,11 +173,6 @@ Here the roc curve for Random Forest model built on MLFlow.
   <img src="images/mlflow_randomforest.png" />
 </p>
 
-Here the confusion matrix for XGBoost model built on MLFlow.
-<p align="center">
-  <img src="images/mlflow_xgboost.png" />
-</p>
-
 Here the history of our runs on MLFlow.
 <p align="center">
   <img src="images/mlruns.png" />
